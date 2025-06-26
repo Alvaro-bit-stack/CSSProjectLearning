@@ -6,6 +6,7 @@ This project was built using a reference from figma: https://www.figma.com/desig
 
 ## Project Structure
 '''
+
 StaticPagePractice/
 └──Practice/
     └──css
