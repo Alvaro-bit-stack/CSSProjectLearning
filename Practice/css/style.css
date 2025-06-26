@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* || RESET */
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* || Variables */
+:root {
+    --FF: "Inter", sans-serif;
+    --FS-HEADING: 25;
+    --FS-SUBHEADING: 10;
+    --PADDING: 0.5em;
+    --FONT-COLOR: rgb(250, 87, 87);
+    --SECONDARY-FONT-COLOR: aliceblue;
+    --BGCOLOR: rgb(35, 40, 49);
+}
+
+html {
+    background-color: var(--BGCOLOR);
+}
+
+/* || HEADINGS */
+.main__h1 {
+    color: var(--FONT-COLOR);
+    font-family: var(--FF);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.main__h2 {
+    font-family: var(--FF);
+    font-size: var(--FS-SUBHEADING);
+    color: var(--SECONDARY-FONT-COLOR);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+/* || FIGURE SECTION */
+.main__figure {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.main__figure .ink {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.main__figure .quill{
+    position: absolute;
+    left:53%;
+    transform: translateX(-50%);
+
+}
+
+/* Quill animation */
+.main__figure .quill {
+    z-index: 0;
+    animation: quill 5s ease-in-out 1;
+    animation-fill-mode: forwards;
+}
+
+.main__figure .ink {
+    z-index: 1;
+    top: 42%;
+}
+
+/* || NAVIGATION */
+.main__nav1 {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main__li1 {
+    font-family: var(--FF);
+    color: var(--SECONDARY-FONT-COLOR);
+    display: inline-block;
+    padding: 1rem;
+}
+
+.main__nav2 {
+    display: flex;
+    border-top: 1px solid lightslategray;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.main__li2 {
+    font-family: var(--FF);
+    color: lightslategray;
+    display: inline-block;
+    padding: 1.5rem;
+}
+
+/* || MAIN CONTENT GRID */
+.main__container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 300px));
+    justify-content: center;
+    gap: min(2vw, 20px);
+    padding: var(--PADDING);
+}
+
+.main__box {
+    background-color: aliceblue;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: right;
+    max-width: 450px;
+}
+
+/* || BOX CONTENT */
+.section__img {
+    margin: auto;
+    margin-top: 1rem;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+.section__h4 {
+    padding: 1rem;
+}
+
+.section__p {
+    padding: 1rem;
+}
+
+/* || FOOTER */
+.footer__nav {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__li {
+    display: inline-block;
+    list-style-type: none;
+    padding: 1rem;
+    color: lightslategray;
+    font-family: var(--FF);
+}
+
+/* || LINKS */
+:any-link {
+    text-decoration: none;
+    color: lightslategray;
+}
+
+a:hover {
+    color: var(--FONT-COLOR);
+}
+
+/* || KEYFRAMES */
+@keyframes quill {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    33% {
+        transform: translateX(-50%) translateY(-100px) rotate(-180deg);
+    }
+    66% {
+        filter: hue-rotate(360deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+}
+
+/* || RESPONSIVE ADJUSTMENTS */
+@media (max-width: 768px) {
+    .main__container {
+        grid-template-columns: 1fr;
+    }
+
+    .main__figure {
+        height: 250px;
+    }
+
+    .main__figure .ink,
+    .main__figure .quill {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
