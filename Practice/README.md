@@ -23,6 +23,9 @@ StaticPagePractice/
 To get started with developing this page locally, here are the steps
 
 1.) clone this project
+
 2.) open the project up using Visual Studio Code
+
 3.) using your choice in a live server extension
+
 4.) using the index.html and live server extension view the page
