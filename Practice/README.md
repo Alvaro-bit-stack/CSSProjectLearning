@@ -4,19 +4,6 @@
 
 This project was built using a reference from figma: https://www.figma.com/design/nh0V05z3NB87ue9v5PcO3R/writings.dev?node-id=0-1&t=mEvW8fLo34WNxHQP-0. I though it was a very helpful reference and helped accelerate the process by allowing me to jump right into the coding aspect. 
 
-## Project Structure
-'''
-
-StaticPagePractice/
-└──Practice/
-    └──css
-        └──style.css #code which holds the css
-    ├──img           #img folder holding all images
-    ├──index.html    #html code for page structure
-    ├──LICENSE
-    ├──gitignore
-
-'''
 
 ## User Instructions(Visual Studio Code) 🚀
 
